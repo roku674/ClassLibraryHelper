@@ -50,7 +50,7 @@ public static class Program
 
         // Regex pattern to match classes and variables without a summary above them
         // This pattern also captures attributes above the class or variable declaration
-        string pattern = @"(?<!/// <summary>[\s\S]*?/// </summary>\s*)((\s*\[.*\]\s*)*)(public|private|protected|internal)(\s+static)?\s+(class|[\w<>]+\s+[\w]+(?=\s*(;|=|\{)))";
+        string pattern = @"(?<!/// <summary>[\s\S]*?/// </summary>\s*)((\s*\[.*\]\s*)+)(public|private|protected|internal)(\s+static)?\s+(class|[\w<>]+\s+[\w]+(?=\s*(;|=|\{)))";
 
         // Replacement pattern to add the summary
         string replacement = @"/// <summary>
